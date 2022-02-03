@@ -1,10 +1,7 @@
 
-provider "aws" {
-  region = "us-east-1"
-}
-
 resource "aws_security_group" "instance" {
-  name = "terraform-example-instance"
+  description   = "Web server security group"
+  name          = "terraform-example-instance"
 
   ingress {
     from_port   = 8080
@@ -28,5 +25,6 @@ resource "aws_instance" "example" {
   tags = {
     agency = "DoD"
     department = "CMH"
+    project = "AHROC"
   }
 }
