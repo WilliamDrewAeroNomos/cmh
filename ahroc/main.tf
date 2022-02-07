@@ -1,7 +1,7 @@
 
 resource "aws_security_group" "instance" {
-  description   = "Web server security group"
-  name          = "terraform-example-instance"
+  description = "Web server security group"
+  name        = "terraform-example-instance"
 
   ingress {
     from_port   = 8080
@@ -12,8 +12,8 @@ resource "aws_security_group" "instance" {
 }
 
 resource "aws_instance" "example" {
-  ami           = "ami-0a8b4cd432b1c3063"
-  instance_type = "t1.micro"
+  ami                    = "ami-0a8b4cd432b1c3063"
+  instance_type          = "t1.micro"
   vpc_security_group_ids = ["${aws_security_group.instance.id}"]
 
   user_data = <<-EOF
@@ -21,10 +21,10 @@ resource "aws_instance" "example" {
               echo "Hello, World" > index.html
               nohup busybox httpd -f -p 8080 &
               EOF
-            
+
   tags = {
-    agency = "DoD"
+    agency     = "DoD"
     department = "CMH"
-    project = "AHROC"
+    project    = "AHROC"
   }
 }

@@ -1,7 +1,7 @@
 variable "AWS_REGION" {
-  description = "Default region"
-  type        = string
-  default     = "us-east-1"
+  description   = "Default region"
+  type          = string
+  default       = "us-east-1"
 }
 
 #variable "PATH_TO_PRIVATE_KEY" {
