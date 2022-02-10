@@ -1,7 +1,7 @@
 
-resource "aws_security_group" "${var.ENVIRONMENT}-web-server-sg" {
+resource "aws_security_group" "instance" {
   description = "Web server security group"
-  name        = "${var.ENVIRONMENT}-web-server-sg"
+  name        = "${var.ENVIRONMENT}-sg"
 
   ingress {
     from_port   = var.SG_FROM_PORT
@@ -21,4 +21,10 @@ resource "aws_instance" "example" {
               echo "Hello, World" > index.html
               nohup busybox httpd -f -p 8080 &
               EOF
+
+  tags = {
+    agency     = "DoD"
+    department = "CMH"
+    project    = "AHROC"
+  }
 }
