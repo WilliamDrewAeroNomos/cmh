@@ -11,7 +11,7 @@ resource "aws_security_group" "instance" {
   }
 }
 
-resource "aws_instance" "example" {
+resource "aws_instance" "web-server-instance" {
   ami                    = "ami-0a8b4cd432b1c3063"
   instance_type          = var.INSTANCE_TYPE
   vpc_security_group_ids = ["${aws_security_group.instance.id}"]
