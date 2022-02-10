@@ -18,6 +18,12 @@ resource "aws_s3_bucket" "terraform_state" {
       }
     }
   }
+  
+  tags = {
+    agency     = "DoD"
+    department = "CMH"
+    project    = "AHROC"
+  }
 }
 
 resource "aws_dynamodb_table" "terraform_locks" {
@@ -28,14 +34,20 @@ resource "aws_dynamodb_table" "terraform_locks" {
     name = "LockID"
     type = "S"
   }
+    
+  tags = {
+    agency     = "DoD"
+    department = "CMH"
+    project    = "AHROC"
+  }
 }
 
-#terraform {
-#  backend "s3" {
-#    bucket         = "dod-usarmy-cmh-arhoc-terraform-state"
-#    key            = "development/s3/terraform.tfstate"
-#    region         = "us-east-1"
-#    dynamodb_table = "dod-usarmy-cmh-arhoc-terraform-state-locks"
-#    encrypt        = true
-#  }
-#}
+terraform {
+  backend "s3" {
+    bucket         = "dod-usarmy-cmh-arhoc-terraform-state"
+    key            = "development/s3/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "dod-usarmy-cmh-arhoc-terraform-state-locks"
+    encrypt        = true
+  }
+}
