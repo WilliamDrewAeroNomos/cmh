@@ -5,6 +5,8 @@ provider "aws" {
     tags = {
       Environment = "${var.ENVIRONMENT}",
       ImpactLevel = "${var.IMPACT_LEVEL}",
+      Organization	= "${var.ORGANIZATION}",
+      CostCenter	= "${var.COST_CENTER}",
       CoreFunctionLead = "${var.CORE_FUNCTION_LEAD}"
   	}
   }

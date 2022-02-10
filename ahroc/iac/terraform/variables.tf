@@ -31,6 +31,12 @@ variable "IMPACT_LEVEL" {
 variable "ORGANIZATION" {
   description   = "Organization"
   type          = string
+  default 			= "TRADOC CMH AWS"
+}
+
+variable "COST_CENTER" {
+  description   = "Organization"
+  type          = string
   default 			= "HMH : Center of Military History (CMH)"
 }
 

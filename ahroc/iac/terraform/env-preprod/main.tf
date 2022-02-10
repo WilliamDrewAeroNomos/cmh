@@ -1,6 +1,6 @@
 
 resource "aws_security_group" "instance" {
-  description = "Web server security group"
+  description = "Web server security group - ${var.ENVIRONMENT}"
   name        = "${var.ENVIRONMENT}-sg"
 
   ingress {
@@ -21,10 +21,4 @@ resource "aws_instance" "example" {
               echo "Hello, World" > index.html
               nohup busybox httpd -f -p 8080 &
               EOF
-
-  tags = {
-    agency     = "DoD"
-    department = "CMH"
-    project    = "AHROC"
-  }
 }
