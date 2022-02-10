@@ -1,5 +1,8 @@
 ### Terraform Plugin security configuration ###
 
-.terraform
+.terraform*
 *.tfstate
 *.tfstate.backup
+
+## Eclipse
+.project
