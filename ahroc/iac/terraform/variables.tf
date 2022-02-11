@@ -115,7 +115,7 @@ variable "AUTO_SHUTDOWN_SCHEDULE" {
 # Defined for each environment 
 
 variable "ENVIRONMENT" {
-  description   = "Current working context (i.e. - dev, test, pre-prod)"
+  description   = "Working context (i.e. - dev, test, pre-prod)"
   type          = string
 }
 
