@@ -18,11 +18,5 @@ resource "aws_s3_bucket" "terraform_state" {
       }
     }
   }
-  
-  tags = {
-    agency     = "DoD"
-    department = "CMH"
-    project    = "AHROC"
-  }
 }
 

@@ -3,11 +3,22 @@ provider "aws" {
    
   default_tags {
     tags = {
-      Environment = "${var.ENVIRONMENT}",
-      ImpactLevel = "${var.IMPACT_LEVEL}",
-      Organization	= "${var.ORGANIZATION}",
-      CostCenter	= "${var.COST_CENTER}",
-      CoreFunctionLead = "${var.CORE_FUNCTION_LEAD}"
+      Environment 										= "${var.ENVIRONMENT}",
+      "Impact Level" 									= "${var.IMPACT_LEVEL}",
+      Organization										= "${var.ORGANIZATION}",
+      "Cost Center"										= "${var.COST_CENTER}",
+      "Core Function Lead" 						= "${var.CORE_FUNCTION_LEAD}",
+      "Cost Allocation" 							= "${var.COST_ALLOCATION}",
+      "Contact-Government Primary" 		= "${var.CONTACT_GOVERNMENT_PRIMARY}",
+      "Contact-Government Secondary" 	= "${var.CONTACT_GOVERNMENT_SECONDARY}",
+      Contact-Other 									= "${var.CONTACT_OTHER}",
+      APMS 														= "${var.APMS}",
+      EMASS 													= "${var.EMASS}",
+      "System Name" 									= "${var.SYSTEM_NAME}",
+      Enterprise 											= "${var.ENTERPRISE}",
+      "Public Facing" 								= "${var.PUBLIC_FACING}",
+      "Initial Support Provider" 			= "${var.INITIAL_SUPPORT_PROVIDER}",
+      AutoShutdownSchedule 						= "${var.AUTO_SHUTDOWN_SCHEDULE}"
   	}
   }
 }

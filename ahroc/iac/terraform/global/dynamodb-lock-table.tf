@@ -7,11 +7,5 @@ resource "aws_dynamodb_table" "terraform_locks" {
     name = "LockID"
     type = "S"
   }
-    
-  tags = {
-    agency     = "DoD"
-    department = "CMH"
-    project    = "AHROC"
-  }
 }
 
