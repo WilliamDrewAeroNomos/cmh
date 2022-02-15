@@ -38,5 +38,11 @@ override.tf.json
 .terraformrc
 terraform.rc
 
+# secret key pair
+**/ahroc-key*
+
 ## Eclipse
 .project
+
+# vi swap
+.*.sw*

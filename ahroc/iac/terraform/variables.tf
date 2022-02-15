@@ -4,6 +4,14 @@ variable "AWS_REGION" {
   default       = "us-east-1"
 }
 
+variable "PATH_TO_PRIVATE_KEY" {
+  default = "ahroc-key"
+}
+
+variable "PATH_TO_PUBLIC_KEY" {
+  default = "ahroc-key.pub"
+}
+
 variable "TF_STATE_S3_BUCKET_NAME" {
   description   = "S3 bucket containing terraform state"
   type          = string
@@ -112,6 +120,11 @@ variable "AUTO_SHUTDOWN_SCHEDULE" {
   default 			= "0000-1200 UTC"
 }
 
+variable "JNLP_PORT" {
+  description = "Port for TCP traffic between Jenkins instances"
+  default     = "49187"
+}
+
 # Defined for each environment 
 
 variable "ENVIRONMENT" {
@@ -127,4 +140,9 @@ variable "SG_FROM_PORT" {
 variable "SG_TO_PORT" {
   description   = "Internal port web server SG"
   type          = number
+}
+
+variable "JENKINS_PASSWORD" {
+  description = "Password for initial user sign in"
+  type          = string
 }
