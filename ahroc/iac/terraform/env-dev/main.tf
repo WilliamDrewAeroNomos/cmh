@@ -9,6 +9,10 @@ resource "aws_security_group" "instance" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
+  tags =  {
+    Name = "web server SG"
+  }
 }
 
 resource "aws_instance" "web-server-instance" {
