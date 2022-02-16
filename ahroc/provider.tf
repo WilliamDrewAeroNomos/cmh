@@ -5,6 +5,7 @@ provider "aws" {
     tags = {
       Environment = "Production"
       Owner       = "Ops"
+    }
   }
 }
 

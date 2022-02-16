@@ -9,9 +9,7 @@ terraform {
 
 provider "aws" {
   region = "${var.AWS_REGION}"
-  shared_credentials_file = ["$HOME/.aws/credentials"]
-  shared_config_files = ["$HOME/.aws/config"]
-   
+ 
   default_tags {
     tags = {
       Environment 										= "${var.ENVIRONMENT}",
