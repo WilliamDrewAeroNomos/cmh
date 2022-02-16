@@ -1,5 +1,16 @@
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "~> 3.74.1"
+    }
+  }
+}
+
 provider "aws" {
   region = "${var.AWS_REGION}"
+  shared_credentials_file = ["$HOME/.aws/credentials"]
+  shared_config_files = ["$HOME/.aws/config"]
    
   default_tags {
     tags = {
