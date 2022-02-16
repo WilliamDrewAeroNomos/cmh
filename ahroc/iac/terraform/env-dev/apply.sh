@@ -35,4 +35,4 @@ echo End Time : ${END_TIMESTAMP}
 echo ""
 #Elapsed time stapm
 printf 'Elapsed Time: %s\n' $(timer $tmr)
-echo "
+echo ""
