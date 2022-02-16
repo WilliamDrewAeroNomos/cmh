@@ -1,6 +1,6 @@
 # route tables
 
-resource "aws_route_table" "main-public" {
+resource "aws_route_table" "main-route-table" {
   vpc_id = aws_vpc.main.id
 
   route {
