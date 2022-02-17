@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "terraform_state" {
   bucket = var.TF_STATE_S3_BUCKET_NAME
   # Enable versioning so we can see the full revision history of our
   # state files
-  
+
   versioning {
     enabled = true
   }
