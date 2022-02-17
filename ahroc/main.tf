@@ -9,7 +9,7 @@ resource "aws_security_group" "instance" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-    tags = {
+  tags = {
     agency     = "DoD"
     department = "CMH"
     project    = "AHROC"
