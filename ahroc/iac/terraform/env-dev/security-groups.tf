@@ -21,9 +21,6 @@ resource "aws_security_group" "jenkins-sg" {
     security_groups = [aws_security_group.jenkins-elb-securitygroup.id]
   }
 
-  tags = {
-    Name = "jenkins-sg"
-  }
 }
 
 #
